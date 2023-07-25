@@ -1,0 +1,10 @@
+<section [ngClass]="{dark: darkMode , light :!darkMode }" class="seasons">
+    <p>seasons works!</p>
+    <p>{{ currentTime }}</p>
+    <!-- [ngClass]="{brown: time <= 5 }" -->
+
+    <!-- <img [src]={{`../../assets/imgs/${currentSeason}.jpeg`}} alt=""> -->
+    <img [src]="getSeasonImagePath(currentSeason)" alt="">
+    <button (click)="toggleIsDarkMode()">dark mode</button>
+    <hr>
+</section>
