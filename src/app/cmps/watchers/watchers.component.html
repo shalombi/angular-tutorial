@@ -1,4 +1,30 @@
 <section>
     <p>watchers works!</p>
+    <!-- {{ watchers | json}} -->
+    <p>{{ selected | json}}</p>
+    <button (click)="onAddWatcher()">Add</button>
+    <ul>
+        <li *ngFor="let watcher of watchers">
+            <img [src]="watcher.imgSrc" />
+            <h3>{{watcher.name}}</h3>
+            <button (click)="onSelect(watcher._id)">select </button>
+            <button (click)="onEditWatcher(watcher)">edit </button>
+            <button (click)="removeWatcher(watcher._id)">x</button>
+
+            <!-- {{ watcher | json}} -->
+
+        </li>
+
+    </ul>
+    <hr />
+
+    <section *ngIf="selected">
+        <h2> selected </h2>
+        <p>{{ selected?.name}}</p>
+        <button (click)="onSelect(null)">close</button>
+        <!-- {{ watchers[favoriteShows]|json}} -->
+        <!-- <p>{{ selected.favoriteShows}}</p> -->
+    </section>
+
 
 </section>

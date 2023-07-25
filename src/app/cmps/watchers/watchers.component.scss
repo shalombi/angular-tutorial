@@ -1,0 +1,11 @@
+ul {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    li {
+        img {
+            max-width: 120px;
+        }
+    }
+}
